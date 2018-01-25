@@ -1,18 +1,20 @@
-def duplicates(x):
+def duplicates(a):
 	d = {};
-	a = "";
-	for char in x:
+	dupes = "";
+	for char in a.lower():
 		if char in d:
 			d[char] += 1
 		else:
 			d[char] = 1;
-
 	for key in d:
 		if d[key] > 1:
-			a += key
-	return ''.join(sorted(a))
+			dupes += key
+	return ''.join(sorted(dupes))
 
 def shuffle(a, b, c):
+	a = a.lower()
+	b = b.lower()
+	c = c.lower()
 	for char in a:
 		if char in c:
 			c = c.replace(char, "")
@@ -38,11 +40,11 @@ def new_word(a, b):
 	i = 0
 	subs = []
 	while i < len(a)-2:
-		subs.append(a[i:i+3])
+		subs.append(a[i:i+3].lower())
 		i += 1
 	for sec in subs:
-		if sec in b:
-			return a[:a.find(sec)] + b[b.find(sec):]
+		if sec in b.lower():
+			return a[:a.lower().find(sec)] + b[b.lower().find(sec):]
 	return ""
 
 def word_score(a):
