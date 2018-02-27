@@ -1,5 +1,5 @@
 # StringManipulation
-UTM Hack Lab Code Golf Challenge 2
+UTM Hack Lab Code Challenge 2
 
 Code String Manipulation 
 
